@@ -1,6 +1,7 @@
 <div
   class="chart"
-  bind:clientWidth={w}>
+  id="chart"
+  bind:offsetWidth={w}>
 
   <div class="annotation">
     Tools that are less likely to be used by
@@ -22,10 +23,13 @@
 
     {#if Object.keys(toolMatches)}
       <g transform={`translate(${w / 2}, ${w / 2})`}>
-        <path
-          class="annotation-line"
-          d={annotationLinePath}
-        />
+        {#if delay}
+          <path
+            in:draw={{duration: 1000, delay: 600}}
+            class="annotation-line"
+            d={annotationLinePath}
+          />
+        {/if}
         <g
           class="legend"
           transform={`translate(${r * 0.9}, ${r * 0.9})`}
@@ -76,7 +80,7 @@
 
         {#if toolTypeArcLengthsMap[toolTypes[0]].arcLength}
           {#each toolTypes as type}
-            <text transition:fade={{ duration: 1000 }}>
+            <text transition:blur={{ duration: 1000 }}>
               <textPath
                 class="type-text type-text--${toolTypeArcLengthsMap[type].isFlipped ? "flipped" : "normal"}"
                 href={toolTypeArcLengthsMap[type].isFlipped ? "#type-circle-2" : "#type-circle"}
@@ -127,7 +131,7 @@
               />
             {/each}
 
-            <text class="tool-text">
+            <text class="tool-text" transition:blur={{delay: 300 + 100 * index}}>
               { tool.name }
             </text>
           </g>
@@ -142,19 +146,36 @@
 
 <script>
   import { onMount } from "svelte"
-  import { fade } from "svelte/transition"
+  import { draw, blur } from "svelte/transition"
   import { scaleQuantile, scaleSqrt, max, mean } from "d3"
   import { flatten, fromPairs, map, omitBy, times, values } from "lodash-es"
   import { toolTypes, toolLabels, toolToTypeMap, toolTypeColors, toolTypeColorsDarker, getPositionFromAngle, getAngleFromArcLength, getArcLengthFromAngle } from "./utils"
 
   let toolMatches = {}
   let toolCounts = {}
-  let w = 800
+  $: w = 800
   $: r = Math.max(w, 800) * 0.45
   $: labelR = r + 20
   let focusedToolIndex = 9
   $: focusedTool = tools[focusedToolIndex] || "..."
   let rings = []
+
+  let delay = false
+
+	onMount(async () => {
+		const toolMatchesRes = await fetch("./tool-matches.json")
+    toolMatches = await toolMatchesRes.json()
+
+		const toolCountsRes = await fetch("./tool-counts.json")
+    toolCounts = await toolCountsRes.json()
+    delay = true
+
+    // seems like `w` misses a resize after styles have been loaded
+    // only happens when assets aren't cached locally (eg. first load, hard refresh)
+    // this is a hacky way to fix a too-wide `w` value
+    const elemWidth = document.getElementById("chart").offsetWidth
+    w = elemWidth
+  })
 
   $: annotationLinePosition = getPositionFromAngle(-Math.PI / 4, r + 20)
   $: annotationLinePath = [
@@ -187,14 +208,6 @@
     if (!keyHandlersTool[event.key]) return
     focusedToolIndex = index
 	}
-
-	onMount(async () => {
-		const toolMatchesRes = await fetch("./tool-matches.json")
-    toolMatches = await toolMatchesRes.json()
-
-		const toolCountsRes = await fetch("./tool-counts.json")
-		toolCounts = await toolCountsRes.json()
-  })
 
   $: tools = Object.keys(toolMatches)
 
@@ -318,6 +331,7 @@
     min-width: 800px;
     min-height: 800px;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   svg {
@@ -423,6 +437,10 @@
 
   .type-circle {
     fill: none;
+  }
+
+  circle {
+    transition: all 0.3s ease-out;
   }
 
 	@media (max-width: 850px) {
