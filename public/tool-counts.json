@@ -1,0 +1,275 @@
+{
+  "clojurescript": {
+    "never_heard": 6412,
+    "not_interested": 10019,
+    "interested": 2993,
+    "would_use": 399,
+    "would_not_use": 269
+  },
+  "elm": {
+    "never_heard": 5525,
+    "not_interested": 8416,
+    "would_not_use": 371,
+    "interested": 4836,
+    "would_use": 941
+  },
+  "purescript": {
+    "interested": 1929,
+    "never_heard": 11577,
+    "not_interested": 6108,
+    "would_use": 312,
+    "would_not_use": 135
+  },
+  "reason": {
+    "never_heard": 10457,
+    "not_interested": 4990,
+    "interested": 3738,
+    "would_use": 707,
+    "would_not_use": 190
+  },
+  "typescript": {
+    "not_interested": 2345,
+    "interested": 4478,
+    "would_use": 11780,
+    "would_not_use": 1465,
+    "never_heard": 56
+  },
+  "angular": {
+    "would_not_use": 7186,
+    "interested": 1952,
+    "would_use": 4396,
+    "not_interested": 6504,
+    "never_heard": 33
+  },
+  "ember": {
+    "not_interested": 12961,
+    "interested": 2862,
+    "never_heard": 1835,
+    "would_not_use": 1669,
+    "would_use": 732
+  },
+  "preact": {
+    "never_heard": 4880,
+    "would_use": 1901,
+    "interested": 5139,
+    "not_interested": 7579,
+    "would_not_use": 542
+  },
+  "react": {
+    "would_use": 14382,
+    "interested": 2410,
+    "would_not_use": 1717,
+    "not_interested": 1554,
+    "never_heard": 9
+  },
+  "svelte": {
+    "never_heard": 4949,
+    "interested": 9011,
+    "not_interested": 4529,
+    "would_use": 1368,
+    "would_not_use": 192
+  },
+  "vuejs": {
+    "would_use": 8122,
+    "interested": 6857,
+    "would_not_use": 1198,
+    "not_interested": 3815,
+    "never_heard": 84
+  },
+  "apollo": {
+    "never_heard": 5273,
+    "not_interested": 1932,
+    "interested": 7185,
+    "would_use": 4956,
+    "would_not_use": 566
+  },
+  "graphql": {
+    "would_use": 7707,
+    "never_heard": 545,
+    "interested": 10085,
+    "not_interested": 1166,
+    "would_not_use": 423
+  },
+  "mobx": {
+    "never_heard": 7621,
+    "would_use": 1653,
+    "not_interested": 5278,
+    "interested": 4622,
+    "would_not_use": 724
+  },
+  "redux": {
+    "never_heard": 523,
+    "interested": 3686,
+    "would_use": 9499,
+    "would_not_use": 3942,
+    "not_interested": 2279
+  },
+  "relay": {
+    "never_heard": 10400,
+    "not_interested": 4205,
+    "interested": 4467,
+    "would_use": 440,
+    "would_not_use": 385
+  },
+  "express": {
+    "never_heard": 882,
+    "would_use": 14230,
+    "interested": 2388,
+    "not_interested": 1232,
+    "would_not_use": 1144
+  },
+  "feathers": {
+    "never_heard": 13099,
+    "not_interested": 4198,
+    "would_not_use": 338,
+    "interested": 1806,
+    "would_use": 378
+  },
+  "gatsby": {
+    "never_heard": 4427,
+    "interested": 6929,
+    "would_use": 4352,
+    "not_interested": 3539,
+    "would_not_use": 569
+  },
+  "koa": {
+    "never_heard": 8815,
+    "not_interested": 4587,
+    "would_use": 2244,
+    "interested": 3637,
+    "would_not_use": 553
+  },
+  "meteor": {
+    "never_heard": 4663,
+    "would_not_use": 1880,
+    "interested": 3340,
+    "not_interested": 9224,
+    "would_use": 717
+  },
+  "nextjs": {
+    "never_heard": 2780,
+    "not_interested": 3120,
+    "interested": 8555,
+    "would_use": 4903,
+    "would_not_use": 512
+  },
+  "nuxt": {
+    "never_heard": 7153,
+    "interested": 5294,
+    "not_interested": 4840,
+    "would_use": 2235,
+    "would_not_use": 290
+  },
+  "sails": {
+    "never_heard": 10594,
+    "would_not_use": 1165,
+    "not_interested": 5843,
+    "interested": 1807,
+    "would_use": 411
+  },
+  "ava": {
+    "never_heard": 13677,
+    "not_interested": 2752,
+    "interested": 1712,
+    "would_use": 997,
+    "would_not_use": 576
+  },
+  "cypress": {
+    "never_heard": 7280,
+    "not_interested": 1803,
+    "interested": 5617,
+    "would_use": 4706,
+    "would_not_use": 342
+  },
+  "enzyme": {
+    "never_heard": 7633,
+    "interested": 3099,
+    "not_interested": 2473,
+    "would_not_use": 1876,
+    "would_use": 4665
+  },
+  "jasmine": {
+    "would_use": 5647,
+    "never_heard": 3910,
+    "not_interested": 4095,
+    "would_not_use": 2790,
+    "interested": 3295
+  },
+  "jest": {
+    "not_interested": 1017,
+    "never_heard": 1687,
+    "would_use": 12091,
+    "interested": 4511,
+    "would_not_use": 453
+  },
+  "mocha": {
+    "interested": 4368,
+    "never_heard": 1601,
+    "would_use": 8303,
+    "would_not_use": 2379,
+    "not_interested": 3104
+  },
+  "puppeteer": {
+    "interested": 5364,
+    "never_heard": 6499,
+    "not_interested": 2472,
+    "would_use": 4791,
+    "would_not_use": 587
+  },
+  "storybook": {
+    "not_interested": 1499,
+    "never_heard": 6185,
+    "interested": 5136,
+    "would_use": 6360,
+    "would_not_use": 559
+  },
+  "cordova": {
+    "never_heard": 3667,
+    "would_use": 1709,
+    "interested": 2042,
+    "would_not_use": 4392,
+    "not_interested": 7871
+  },
+  "electron": {
+    "never_heard": 1460,
+    "interested": 9019,
+    "would_use": 5043,
+    "not_interested": 3316,
+    "would_not_use": 842
+  },
+  "expo": {
+    "never_heard": 12069,
+    "would_use": 2896,
+    "not_interested": 2065,
+    "interested": 1613,
+    "would_not_use": 1029
+  },
+  "ionic": {
+    "never_heard": 3750,
+    "not_interested": 7584,
+    "would_not_use": 2725,
+    "interested": 3739,
+    "would_use": 1861
+  },
+  "nativeapps": {
+    "interested": 7209,
+    "never_heard": 3889,
+    "not_interested": 4964,
+    "would_use": 2788,
+    "would_not_use": 812
+  },
+  "nwjs": {
+    "never_heard": 14884,
+    "not_interested": 2976,
+    "would_not_use": 618,
+    "interested": 881,
+    "would_use": 299
+  },
+  "reactnative": {
+    "interested": 8738,
+    "would_use": 5352,
+    "not_interested": 4150,
+    "would_not_use": 1169,
+    "never_heard": 297
+  }
+}
