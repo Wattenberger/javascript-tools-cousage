@@ -11,7 +11,7 @@
     are further from the center
   </div>
   <div class="annotation-left">
-    Use your <div class="key" on:click={() => diffFocusedToolIndex(-1)}>⮜</div> and <div class="key" on:click={() => diffFocusedToolIndex(1)}>⮞</div> arrow keys to cycle through tools.
+    Use your <div class="key" on:click={() => diffFocusedToolIndex(-1)}>&lt;-</div> and <div class="key" on:click={() => diffFocusedToolIndex(1)}>-&gt;</div> arrow keys to cycle through tools.
     <br />
     Or click a specific tool to focus on it.
   </div>
